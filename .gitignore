@@ -1,0 +1,5 @@
+flaskbb/
+flaskbb.sqlite
+logs/
+migrations/
+docs/

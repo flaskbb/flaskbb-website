@@ -1,0 +1,117 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+  color: #5a5a5a;
+}
+
+#github {
+  display: none;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 0;
+  right: 0;
+  z-index: 1050;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.marketing {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  /* Remove the edge padding needed for mobile */
+  .marketing {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+  #github {
+    display: block;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 0;
+    right: 0;
+    z-index: 1050;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+
+/*
+ * Homepage
+ *
+ * Tweaks to the custom homepage and the masthead (main jumbotron).
+ */
+
+/* Share masthead with page headers */
+.masthead {
+  position: relative;
+  padding: 30px 15px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0,0,0,.1);
+  background-color: #3276b1;
+  background-image: -webkit-linear-gradient(top, #285e8e 0%, #3276b1 100%);
+  background-image: linear-gradient(to bottom, #285e8e 0%, #3276b1 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#285e8e', endColorstr='#3276b1', GradientType=0);
+
+}
+
+
+
+.masthead small {
+  font-size: 80%;
+  color: #ccc;
+}
