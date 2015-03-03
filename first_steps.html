@@ -61,10 +61,11 @@
 		</div>
 	</div>
 	<div class="container">
-		
+
 		<h1>Installation</h1>
-		<p>To install FlaskBB, you will first need a server capable of running a webserver.</p> 
-		
+		<p>To install FlaskBB, you will first need a server capable of running a webserver.</p>
+    <p>Please also note, that this guide is a for a <strong>development</strong> installation of FlaskBB.</p>
+
 		<h2>Dependencies</h2>
 		<p>Before you can download and install FlaskBB you will need a few dependencies on your server first:</p>
 		<ul>
@@ -79,29 +80,31 @@
 		<code> pip install virtualenv</code>
 
 		<h2>Create Virtualenv for FlaskBB</h2>
-		<p class='instruction'>We will want to create a virtualenv for flaskbb</p>
-		<code>virtualenv flaskbb</code>
+		<p class='instruction'>We will want to create a virtualenv for flaskbb. </p>
+    <p class='instruction'>Preferable you can put the virtualenv somewhere where it doesn't disturb you. For example, you can create a directory called <code>.venv</code> where all your virtualenv's are living.</p>
+		<code>virtualenv flaskbb_env</code>
 		<p class='instruction'>We will then want to activate your new virtualenv so that any dependencies you install with not interfere with anything else on your machine.</p>
-		<code>source flaskbb/bin/activate</code>
+		<code>source flaskbb_env/bin/activate</code>
 
 		<h2>Get FlaskBB and install dependencies</h2>
 		<p class='instruction'>Now we will want to download FlaskBB from github and install its dependencies.</p>
-		<code>cd flaskbb</code></br>
 		<code>git clone https://github.com/sh4nks/flaskbb.git</code>
 		<p class='instruction'>Then we will install the dependencies on your new virtualenv.</p>
-		<code>cd flaskbb</code>
+    <code>cd flaskbb</code><br />
 		<code>pip install -r requirements.txt</code>
-		
+
 		<h1>Configuration</h1>
 		<p class='instruction'>The next thing we will need to do is configure the FlaskBB</p>
 		<p class='instruction'>Doing so is easy, just activate the developement.py.example and create the test configuration</p>
-		<code>cp flaskbb/configs/development.py.example flaskbb/configs/development.py</code>
-		<code>python manage.py createall</code>
+    <code>cp flaskbb/configs/development.py.example flaskbb/configs/development.py</code><br />
+    <p class='instruction'>Let's populate the database with some example data</p>
+		<code>python manage.py populate</code>
 
 		<h1>Run the server</h1>
 		<p class='instruction'>Now you can start the server and start playing!</p>
 		<code>python manage.py runserver</code>
-		<p class='instruction'>This will create and instance of FlaskBB, running on http://localhost:8080</p>
+    <p class='instruction'>This will create and instance of FlaskBB, running on http://localhost:8080</p>
+    <p class='instruction'>For a more extensive installation guide visit the <a href="http://flaskbb.readthedocs.org/en/latest/installation.html">installation docs</a>.</p>
 	<footer>
 		<p class="text-muted pull-left">powered by <a href="http://flask.pocoo.org">Flask</a></p>
 		<p class="text-muted pull-right">&copy; 2014 - <a href="http://flaskbb.org">FlaskBB.org</a></p>
