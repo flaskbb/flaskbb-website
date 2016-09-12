@@ -9,3 +9,5 @@ body:
 ----
 
 put some info about flaskbb's configuration here
+---
+active_about: yes

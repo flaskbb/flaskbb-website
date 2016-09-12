@@ -3,3 +3,5 @@ title: A Lightweight Forum System in Python
 body: 
 ---
 _template: index.html
+---
+active_about: no

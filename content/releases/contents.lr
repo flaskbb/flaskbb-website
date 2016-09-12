@@ -1,6 +1,6 @@
 _model: page
 ---
-title: releases
+title: Releases
 ---
 body:
 
@@ -13,3 +13,5 @@ body:
 Not released yet.
 
 - Initial release.
+---
+active_about: yes
