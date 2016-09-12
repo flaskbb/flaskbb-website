@@ -4,3 +4,4 @@ logs/
 migrations/
 docs/
 node_modules
+build/
