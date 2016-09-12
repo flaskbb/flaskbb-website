@@ -8,6 +8,7 @@ body:
 
 ----
 
-basic installation guide, link to docs @ readthedocs
+Help me! Feel free to open a PR with improved docs.
+http://flaskbb.readthedocs.io/en/latest/installation.html#installation
 ---
 active_about: yes

@@ -8,6 +8,8 @@ body:
 
 ----
 
-to get started...
+I expect still some bigger changes on how to install and deploy FlaskBB.
+
+The docs over at readthedocs are still valid: http://flaskbb.readthedocs.io/en/latest/installation.html#installation
 ---
 active_about: yes

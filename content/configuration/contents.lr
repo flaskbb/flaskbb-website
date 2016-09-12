@@ -8,6 +8,8 @@ body:
 
 ----
 
-put some info about flaskbb's configuration here
+For development, use ``development.py`` (you have to copy ``development.py.example`` to ``development.py``). The configuration files are located in ``flaskbb/configs``.
+
+http://flaskbb.readthedocs.io/en/latest/installation.html#id2
 ---
 active_about: yes
