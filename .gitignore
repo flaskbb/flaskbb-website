@@ -3,3 +3,4 @@ flaskbb.sqlite
 logs/
 migrations/
 docs/
+node_modules

@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="col-sm-3 col-md-3 toc">
+        <ul class="tree-nav">
+            <li><a class="header {% if this.is_child_of('/about') %}active{% endif %}" href="/about">About</a></li>
+            <li><a class="item {% if this.is_child_of('/features') %}active{% endif %}" href="/features">Features</a></li>
+            <li><a class="item {% if this.is_child_of('/license') %}active{% endif %}" href="/license">License</a></li>
+            <div class="seperator"></div>
+            <li><a class="header {% if this.is_child_of('/getting-started') %}active{% endif %}" href="/getting-started">Getting Started</a></li>
+            <li><a class="item {% if this.is_child_of('/installation') %}active{% endif %}" href="/installation">Installation</a></li>
+            <li><a class="item {% if this.is_child_of('/configuration') %}active{% endif %}" href="/configuration">Configuration</a></li>
+            <div class="seperator"></div>
+            <li><a class="header {% if this.is_child_of('/development') %}active{% endif %}" href="/development">Development</a></li>
+            <li><a class="item" href="https://github.com/sh4nks/flaskbb">Source Code @ GitHub</a></li>
+            <li><a class="item" href="https://github.com/sh4nks/flaskbb/issues">Issues @ GitHub</a></li>
+            <li><a class="item {% if this.is_child_of('/releases') %}active{% endif %}" href="#">Releases</a></li>
+        </ul>
+    </div>
+
+    <div class="col-sm-9 col-md-9 page-content">
+        <div class="paper">
+        {{ this.body }}
+        </div>
+    </div>
+</div>
+{% endblock %}

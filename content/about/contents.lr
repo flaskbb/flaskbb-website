@@ -1,0 +1,15 @@
+title: About
+---
+body:
+
+# About
+
+----
+
+FlaskBB is a simple and extensible forum software which should be seen as the foundation for building communities. It is written in Python using the web framework [Flask](http://flask.pocoo.org). FlaskBB is being distributed under the [BSD 3-Clause License](/license).
+FlaskBB is an abbreviation for **Flask** **B**ulletin **B**oard.
+
+## Contact
+
+put some contact details here
+

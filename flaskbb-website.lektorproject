@@ -1,0 +1,5 @@
+[project]
+name = FlaskBB
+
+[packages]
+lektor-webpack-support = 0.1

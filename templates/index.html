@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+    <!-- Introduction -->
+    <div class="introduction">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="headline">
+                        <h1>FlaskBB</h1>
+                        <h3>A classic Forum Software in Python with a Modern and Fresh look.</h3>
+                        <hr class="introduction-divider">
+                        <ul class="list-inline social-buttons">
+                            <li><a href="./install.html" class="btn btn-success btn-lg"><span class="network-name"><i class="fa fa-download"></i> Install FlaskBB</span></a></li>
+                            <li><a href="https://github.com/sh4nks/flaskbb" class="btn btn-info btn-lg"><span class="network-name"><i class="fa fa-code"></i> Source Code</span></a></li>
+                        </ul>
+                        <div>
+                            <a class="github-button" href="https://github.com/sh4nks/flaskbb" data-icon="octicon-star" data-style="mega" data-count-href="/sh4nks/flaskbb/stargazers" data-count-api="/repos/sh4nks/flaskbb#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star sh4nks/flaskbb on GitHub">Star</a>
+                            <a class="github-button" href="https://github.com/sh4nks/flaskbb/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/sh4nks/flaskbb/network" data-count-api="/repos/sh4nks/flaskbb#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork sh4nks/flaskbb on GitHub">Fork</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container -->
+    </div><!-- /.introduction -->
+
+    <!-- Page Content -->
+    <div class="background-dark">
+        <div class="container">
+            <div class="row features">
+                <div class="col-xs-6 col-md-6 col-lg-6 feature">
+                    <i class="feature-circle fa fa-code"></i>
+                    <h2>Open Source</h2>
+                    <p>FlaskBB is open source and the whole source code is available on <a href="https://github.com/sh4nks/flaskbb">GitHub</a>. It is being developed under the BSD 3-Clause license.</p>
+                </div>
+                <div class="col-xs-6 col-md-6 col-lg-6 feature">
+                    <i class="feature-circle fa fa-puzzle-piece"></i>
+                    <h2>Plugin System</h2>
+                    <p>Due to the plugin system it is possible to extend FlaskBB without touching a single line of code. You just drop the plugin into the plugins directory <!-- TODO: or install it directly with the python package manager <code>pip</code>--> and activate it in the managment panel.</p>
+                </div>
+            </div>
+            <div class="row features">
+                <div class="col-xs-6 col-md-6 col-lg-6 feature">
+                    <i class="feature-circle fa fa-globe"></i>
+                    <h2>Themes</h2>
+                    <p>Are you sick of the standard theme or you simply want to create a customized style for your site? No problem! You can customize every template in FlaskBB. Besides that, you can also install community made themes.</p>
+                </div>
+                <div class="col-xs-6 col-md-6 col-lg-6 feature">
+                    <i class="feature-circle fa fa-laptop"></i>
+                    <h2>Modern &amp; Classic</h2>
+                    <p>Our goal is to develop a forum system with modern technologies and sticking to already well tested and approved layouts.</p>
+                </div>
+            </div>
+        </div><!-- /.container -->
+    </div><!-- /.background-dark -->
+
+    <div class="background-light">
+        <div class="slideshow-wrapper">
+            <div class="slideshow">
+                <div class="slideshow-inner">
+                    <div class="carousel slide" data-ride="carousel" data-interval="8500" id="flaskbb-carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item slide active">
+                                <div class="container">
+                                    <img src="{{ '/static/imgs/index.png' | asseturl }}">
+                                </div>
+                            </div>
+                            <div class="item slide">
+                                <div class="container">
+                                    <img src="{{ '/static/imgs/forum.png' | asseturl }}">
+                                </div>
+                            </div>
+                            <div class="item slide">
+                                <div class="container">
+                                    <img src="{{ '/static/imgs/emoji.png' | asseturl }}">
+                                </div>
+                            </div>
+                            <div class="item slide">
+                                <div class="container">
+                                    <img src="{{ '/static/imgs/topictracker.png' | asseturl }}">
+                                </div>
+                            </div>
+                            <div class="item slide">
+                                <div class="container">
+                                    <img src="{{ '/static/imgs/portal_plugin.png' | asseturl }}">
+                                </div>
+                            </div>
+                            <div class="item slide">
+                                <div class="container">
+                                    <img src="{{ '/static/imgs/management_overview.png' | asseturl }}">
+                                </div>
+                            </div>
+                            <div class="item slide">
+                                <div class="container">
+                                    <img src="{{ '/static/imgs/forum_management.png' | asseturl }}">
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#flaskbb-carousel" role="button" data-slide="prev">
+                            <span class="icon-prev fa fa-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#flaskbb-carousel" role="button" data-slide="next">
+                            <span class="icon-next fa fa-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- slideshow-wrapper -->
+    </div><!-- background-light -->
+
+    <div class="background-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-8 col-lg-10">
+                    <h4>Development</h4>
+                    <div class="github-commit">
+                        <div class="commit">
+                            <a href="" class="sha"></a>
+                            <span class="date"></span>
+                        </div>
+                    </div>
+                    <p>
+                        <a href="https://travis-ci.org/sh4nks/flaskbb"><img src="https://travis-ci.org/sh4nks/flaskbb.svg?branch=master" alt="Build Status" /></a>
+                        <a href="https://coveralls.io/github/sh4nks/flaskbb?branch=master"><img src="https://coveralls.io/repos/github/sh4nks/flaskbb/badge.svg?branch=master" alt="Coverage Status" /></a>
+                        <a href="https://landscape.io/github/sh4nks/flaskbb/master"><img src="https://landscape.io/github/sh4nks/flaskbb/master/landscape.svg?style=flat" alt="Code Health" /></a>
+                        <a href="https://flaskbb.org"><img src="https://img.shields.io/badge/license-BSD-blue.svg" alt="BSD License" /></a>
+                    </p>
+                    <div class="github-issues">
+                        Help! There are
+                        <a href="https://github.com/sh4nks/flaskbb/issues"><span class="open-issues"></span> open issues</a>
+                        and
+                        <a href="https://github.com/sh4nks/flaskbb/pulls"><span class="pull-requests"></span> pull requests</a>.
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4 col-lg-2">
+                    <h4>Links</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="/home">Home</a>
+                        </li>
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                        <li>
+                            <a href="/documentation">Documentation</a>
+                        </li>
+                        <li>
+                            <a href="https://forums.flaskbb.org">Community</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/sh4nks/flaskbb">GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- /.container -->
+    </div><!-- /.background-dark -->
+{% endblock %}
