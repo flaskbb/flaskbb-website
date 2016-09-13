@@ -101,8 +101,7 @@ h2 {
 }
 
 
-
-@media(max-width:767px) {
+@media (max-width: 767px) {
     .headline {
         padding-bottom: 5%;
 
@@ -111,19 +110,17 @@ h2 {
         }
     }
 
-    ul {
-        .social-buttons > li {
-            display: block;
-            margin-bottom: 20px;
-            padding: 0;
+    .introduction-divider {
+        width: 100%;
+    }
 
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
+    .social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
 
-        .introduction-divider {
-            width: 100%;
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 }
@@ -236,6 +233,7 @@ footer {
         }
     }
 }
+
 @media (max-width: 991px) {
     .slideshow .slide img {
         height: auto;
