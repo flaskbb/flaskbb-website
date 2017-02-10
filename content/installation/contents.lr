@@ -8,7 +8,40 @@ body:
 
 ----
 
-Help me! Feel free to open a PR with improved docs.
-http://flaskbb.readthedocs.io/en/latest/installation.html#installation
+Before you can start with installing the dependencies, you have to download FlaskBB. For now, the recommended method is to clone it as it will include the latest changes but that will change upon the first release.
+```
+$ git clone https://github.com/sh4nks/flaskbb.git
+```
+Now, change into the flaskbb directory
+```
+$ cd flaskbb 
+```
+and create a virtualenv where we install all our dependencies which are needed in order for FlaskBB to work.
+```
+$ virtualenv .venv
+```
+after that, we can activate the environment
+```
+$ source .venv/bin/activate
+```
+and continue with installing the dependencies
+```
+$ pip install -r requirements.txt
+```
+Now that you have set up the environment where FlaskBB will run we can continue with configuring and installing FlaskBB.
+To make configuring FlaskBB easier, we have included a little wizard which will ask you some questions and based on your answers it will generate a config file `flaskbb.cfg` in the root folder of FlaskBB. You are free to edit and modify the file afterwards.
+```
+$ flaskbb makeconfig
+```
+During the installation process you are asked about your username, your email address and the password for your administrator user.
+```
+$ flaskbb --config flaskbb.cfg install
+```
+Run the development server and visit [localhost:5000](http://localhost:5000) to see if everything worked.
+```
+$ flaskbb --config flaskbb.cfg run
+```
+
+Head over to the [Deployment](/deployment) docs to see how FlaskBB can be deployed.
 ---
 active_about: yes

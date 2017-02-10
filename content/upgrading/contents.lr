@@ -1,0 +1,15 @@
+_model: page
+---
+title: Upgrading
+---
+body:
+
+# Upgrading
+
+----
+
+If the database models changed after a release, you have to run the upgrade command:
+
+```
+$ flaskbb db upgrade
+```

@@ -7,16 +7,18 @@
         <ul class="tree-nav">
             <li><a class="header {% if this.is_child_of('/about') %}active{% endif %}" href="{{ '/about'|url }}">About</a></li>
             <li><a class="item {% if this.is_child_of('/features') %}active{% endif %}" href="{{ '/features'|url }}">Features</a></li>
+            <li><a class="item {% if this.is_child_of('/releases') %}active{% endif %}" href="{{ '/releases'|url }}">Releases</a></li>
             <li><a class="item {% if this.is_child_of('/license') %}active{% endif %}" href="{{ '/license'|url }}">License</a></li>
             <div class="seperator"></div>
             <li><a class="header {% if this.is_child_of('/getting-started') %}active{% endif %}" href="{{ '/getting-started'|url }}">Getting Started</a></li>
             <li><a class="item {% if this.is_child_of('/installation') %}active{% endif %}" href="{{ '/installation'|url }}">Installation</a></li>
-            <li><a class="item {% if this.is_child_of('/configuration') %}active{% endif %}" href="{{ '/configuration'|url }}">Configuration</a></li>
+            <li><a class="item {% if this.is_child_of('/deployment') %}active{% endif %}" href="{{ '/deployment'|url }}">Deployment</a></li>
+            <li><a class="item {% if this.is_child_of('/upgrading') %}active{% endif %}" href="{{ '/upgrading'|url }}">Upgrading</a></li>
             <div class="seperator"></div>
             <li><a class="header {% if this.is_child_of('/development') %}active{% endif %}" href="{{ '/development'|url }}">Development</a></li>
             <li><a class="item" href="https://github.com/sh4nks/flaskbb">Source Code @ GitHub</a></li>
             <li><a class="item" href="https://github.com/sh4nks/flaskbb/issues">Issues @ GitHub</a></li>
-            <li><a class="item {% if this.is_child_of('/releases') %}active{% endif %}" href="{{ '/releases'|url }}">Releases</a></li>
+            <li><a class="item" href="https://flaskbb.readthedocs.io">Docs @ readthedocs</a></li>
         </ul>
     </div>
 
@@ -27,3 +29,5 @@
     </div>
 </div>
 {% endblock %}
+
+

@@ -8,8 +8,9 @@ body:
 
 ----
 
-I expect still some bigger changes on how to install and deploy FlaskBB.
-
-The docs over at readthedocs are still valid: http://flaskbb.readthedocs.io/en/latest/installation.html#installation
+We recommend installing FlaskBB in an isolated Python environment. This can be
+achieved with [virtualenv](https://virtualenv.pypa.io/en/latest/installation.html) which we will use in our little installation guide.
+In addition to virtualenv, we will also use the package manager [pip](http://www.pip-installer.org/en/latest/installing.html) 
+to install the dependencies for FlaskBB.
 ---
 active_about: yes

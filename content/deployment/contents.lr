@@ -1,0 +1,79 @@
+_model: page
+---
+title: Deployment
+---
+body:
+
+# Deployment
+
+----
+
+We will use [gunicorn](http://gunicorn.org/) and [nginx](https://nginx.org/en/) in this guide but you can run FlaskBB with every WSGI-compatible server like *uWSGI* or *gevent*. nginx is just used as a reverse proxy. 
+
+Just install gunicorn via pip inside your virtualenv:
+```
+$ pip install gunicorn
+```
+
+Either run gunicorn with the in-built command, which is just a wrapper around the `gunicorn` command:
+```
+flaskbb start
+```
+or use the gunicorn command, which allows you to be more flexible:
+```
+$ gunicorn wsgi:flaskbb --log-file logs/gunicorn.log --pid gunicorn.pid -w 4
+```
+To stop FlaskBB, just send a KILL signal to gunicorn.
+```
+kill `cat gunicorn.pid`
+```
+
+In addition to gunicorn we also need to start celery, which is a task queue that FlaskBB uses to send non blocking emails.
+```
+$ flaskbb celery start
+```
+
+Below is a example configuration for *nginx*. In this configuration all static files will be served via nginx.
+
+```nginx
+server {
+    listen 80;
+    server_name forums.flaskbb.org;
+
+    access_log /var/log/nginx/access.forums.flaskbb.log;
+    error_log /var/log/nginx/error.forums.flaskbb.log;
+
+    location / {
+        try_files $uri @flaskbb;
+    }
+
+    # Static files
+    location /static {
+       alias /var/apps/flaskbb/flaskbb/static/;
+    }
+
+    location ~ ^/_themes/([^/]+)/(.*)$ {
+        alias /var/apps/flaskbb/flaskbb/themes/$1/static/$2;
+    }
+
+    # robots.txt
+    location /robots.txt {
+        alias /var/apps/flaskbb/flaskbb/static/robots.txt;
+    }
+
+    location @flaskbb {
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Host $http_host;
+        #proxy_set_header SCRIPT_NAME /forums;  # This line will make flaskbb available on /forums;
+        proxy_redirect off;
+        proxy_buffering off;
+
+        proxy_pass http://127.0.0.1:5000;
+    }
+}
+```
+
+For other deployment options, visit the full-fledged documentation [here](https://flaskbb.readthedocs.io/en/latest/installation.html).
+---
+active_about: yes

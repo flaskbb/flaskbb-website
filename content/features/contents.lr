@@ -8,6 +8,53 @@ body:
 
 ----
 
-Soon this will be full of text and pictures. I promise. For now just check out our forums :)
+Currently, following features are implemented:
+
+- **Private Messages**
+
+   You can start a private conversation with another user.
+
+- **Management Interface**
+
+   Easily manage the forum with the management interface.
+
+- **Group based permissions**
+
+   Create groups with different permissions. Choose which group can view which forum.
+
+- **Markdown Support**
+
+   Format your posts in markdown. Emoji support is included.
+
+- **Topic Tracker**
+
+   Track your favorite posts with the Topic Tracker.
+
+- **Unread Topics/Forums**
+
+   Keep track which topics and forums you already have read.
+
+- **i18n Support**
+
+   FlaskBB supports, besides English, user translated languages as well. If your language isn't listed, feel free to add it!
+
+- **Themes**
+
+   Are you sick of the standard theme or you simply want to create a customized style for your site? No problem! You can customize every template in FlaskBB.
+
+- **Plugin System**
+
+   Due to the plugin system it is possible to extend FlaskBB without touching a single line of code. You just drop the plugin into the plugins directory and activate it in the managment panel.
+
+- **Command Line Interface**
+
+   Have you ever seen a forum software that can be managed via a CLI? FlaskBB can do that.
+
+
+<img src="/static/imgs/index.png" class="screenshot" alt="FlaskBB Forum Index">
+
+Checkout the [FlaskBB Forums](https://forums.flaskbb.org) to see an actual
+running instance of FlaskBB. Use **demo** // **demo** as login for the test user.
+
 ---
 active_about: yes
