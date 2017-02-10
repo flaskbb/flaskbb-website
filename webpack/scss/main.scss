@@ -265,6 +265,8 @@ pre {
     word-wrap: break-word;
     color: #333;
     background-color: #f5f5f5;
+    border: 1px solid $border-color;
+    border-radius: 0;
 }
 
 ul.tree-nav {
@@ -350,6 +352,13 @@ ul.tree-nav {
       margin-left: -30px;
     }
   }
+}
+
+img.screenshot {
+    width: 100%;
+    box-shadow: 0 4px 16px fade-out($gray, 0.8);
+    border-radius: 6px;
+    margin: 15px 0;
 }
 
 .paper {
