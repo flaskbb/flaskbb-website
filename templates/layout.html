@@ -7,17 +7,18 @@
     <meta name="description" content="FlaskBB - A Lightweight Forum Software in Python.">
     <meta name="author" content="FlaskBB Team">
 
-    <title>FlaskBB — {% block title %}A Lightweight Forum System in Python{% endblock %}</title>
+    {% set title = this.title ~ ' - A Lightweight Forum Software in Python' if this.title == 'FlaskBB' else this.title ~ ' - FlaskBB' %}
+    <title>{{ title }}</title>
 
-    <!-- some fancy open graph shit -->
-    <meta property="og:title" content="FlaskBB - A Lightweight Forum System in Python" />
+    <!-- open graph -->
+    <meta property="og:title" content="FlaskBB — A Lightweight Forum System in Python" />
     <meta property="og:type" content="website" />
 
     <!-- Favicon -->
     <link href="{{'/static/favicon.ico'|asseturl }}" rel="icon">
     <!-- compiled and minified CSS -->
+    <link rel="stylesheet" href="{{'/static/vendor.css'|asseturl }}">
     <link rel="stylesheet" href="{{'/static/styles.css'|asseturl }}">
-    <link rel="stylesheet" href="{{ get_pygments_stylesheet()|url }}">
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -55,7 +56,7 @@
                         <a href="https://forums.flaskbb.org">Community</a>
                     </li>
                     <li>
-                        <a href="https://flaskbb.readthedocs.io">Docs</a>
+                        <a href="https://flaskbb.readthedocs.io">Documentation</a>
                     </li>
                 </ul>
             </div><!-- /.navbar-collapse -->

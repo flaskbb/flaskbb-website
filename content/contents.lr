@@ -1,7 +1,9 @@
-title: A Lightweight Forum System in Python
+title: FlaskBB
 ---
 body: 
 ---
 _template: index.html
 ---
 active_about: no
+---
+subtitle: A Lightweight Forum System in Python

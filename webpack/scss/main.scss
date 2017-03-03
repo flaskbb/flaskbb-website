@@ -1,12 +1,6 @@
-// Import custom Bootstrap variables
-@import "bootstrap-variables";
-// Import Bootstrap for Sass
-$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
-@import '~bootstrap-sass/assets/stylesheets/bootstrap';
-// Import fontawesome icons
-$fa-font-path: "~font-awesome/fonts/";
-@import "~font-awesome/scss/font-awesome";
-
+// Import/include pygments here even though it SHOULD be put automatically
+// in 'assets' which for some unknown reasons isn't happening
+@import "pygments";
 
 $background-dark-color: #F6F9FC;
 $background-light-color: #FFF;
@@ -243,7 +237,6 @@ footer {
 
 .toc {
     padding-top: 0px;
-    //padding-right: 0px;
 
     & > .tree-nav {
         border: 1px solid $border-color;
@@ -295,10 +288,6 @@ ul.tree-nav {
     padding: 0;
     margin: 0;
 
-    + li {
-      //border-top: 1px solid $border-color;
-    }
-
     &.active {
       > a {
         font-weight: bold;
@@ -312,7 +301,6 @@ ul.tree-nav {
 
       @media (max-width: 991px) {
         padding: 5px 10px;
-        //font-size: 14px;
       }
 
       @media (max-width: 767px) {
@@ -320,9 +308,6 @@ ul.tree-nav {
       }
     }
 
-    @media (max-width: 767px) {
-      //border: none!important;
-    }
   }
 
   ul {
@@ -331,10 +316,8 @@ ul.tree-nav {
     padding: 0;
 
     li {
-      //border-top: 1px solid #ddd;
       padding-left: 10px;
       margin-left: 0px;
-      //font-size: 14px;
     }
 
     li li {
@@ -356,7 +339,7 @@ ul.tree-nav {
 
 img.screenshot {
     width: 100%;
-    box-shadow: 0 4px 16px fade-out($gray, 0.8);
+    box-shadow: 0 4px 16px rgba(85, 85, 85, 0.8);
     border-radius: 6px;
     margin: 15px 0;
 }

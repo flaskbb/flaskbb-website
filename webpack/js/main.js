@@ -1,5 +1,5 @@
 require("jquery");
-require("timeago")
+require("timeago");
 require("bootstrap-sass");
 
 $(document).ready(function () {

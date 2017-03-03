@@ -5,11 +5,12 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     entry: {
         'app': './js/main.js',
-        'styles': './scss/main.scss'
+        'styles': './scss/main.scss',
+        'vendor': './scss/vendor.scss'
     },
     output: {
         path: path.dirname(__dirname) + '/assets/static',
-        filename: '[name].js'
+        filename: 'app.js'
     },
     devtool: '#cheap-module-source-map',
     resolve: {
@@ -42,10 +43,9 @@ module.exports = {
             ]
         },
         plugins: [
-        new ExtractTextPlugin('styles.css', {
-            allChunks: true
-        }),
-        new webpack.optimize.UglifyJsPlugin(),
-        new webpack.optimize.DedupePlugin()
+            new ExtractTextPlugin('[name].css', {
+                allChunks: true
+            }),
+            new webpack.optimize.UglifyJsPlugin()
         ]
     };
