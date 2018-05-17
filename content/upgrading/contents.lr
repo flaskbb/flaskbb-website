@@ -8,8 +8,20 @@ body:
 
 ----
 
+First, you upgrade the source of FlaskBB using a simple
+```
+$ git pull
+```
+
+after that, the dependencies of FlaskBB should be updated (do not forget to switch into the virtualenv where you have installed FlaskBB into)
+```
+pip install --upgrade -r requirements.txt
+```
+
 If the database models changed after a release, you have to run the upgrade command:
 
 ```
 $ flaskbb db upgrade
 ```
+
+Don't forget to restart your application server when you are done upgrading!

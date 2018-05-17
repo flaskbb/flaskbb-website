@@ -8,15 +8,16 @@ body:
 
 ----
 
-Before you can start with installing the dependencies, you have to download FlaskBB. For now, the recommended method is to clone it as it will include the latest changes but that will change upon the first release.
+Before you can start with installing the dependencies, you have to download FlaskBB. For now, the recommended method is to clone it and change into the latest release branch which is ``2.0.0``.
 ```
 $ git clone https://github.com/sh4nks/flaskbb.git
 ```
-Now, change into the flaskbb directory
+Now, change into the flaskbb directory and checkout the release branch:
 ```
 $ cd flaskbb 
+$ git checkout 2.0.0
 ```
-and create a virtualenv where we install all our dependencies which are needed in order for FlaskBB to work.
+Next, we create a virtualenv where we install all our dependencies which are needed in order for FlaskBB to work.
 ```
 $ virtualenv .venv
 ```

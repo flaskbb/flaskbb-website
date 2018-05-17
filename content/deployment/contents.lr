@@ -10,16 +10,11 @@ body:
 
 We will use [gunicorn](http://gunicorn.org/) and [nginx](https://nginx.org/en/) in this guide but you can run FlaskBB with every WSGI-compatible server like *uWSGI* or *gevent*. nginx is just used as a reverse proxy. 
 
-Just install gunicorn via pip inside your virtualenv:
+Install gunicorn via pip inside your virtualenv:
 ```
 $ pip install gunicorn
 ```
-
-Either run gunicorn with the in-built command, which is just a wrapper around the `gunicorn` command:
-```
-flaskbb start
-```
-or use the gunicorn command, which allows you to be more flexible:
+and run FlaskBB using the ``gunicorn`` command:
 ```
 $ gunicorn wsgi:flaskbb --log-file logs/gunicorn.log --pid gunicorn.pid -w 4
 ```
@@ -28,9 +23,9 @@ To stop FlaskBB, just send a KILL signal to gunicorn.
 kill `cat gunicorn.pid`
 ```
 
-In addition to gunicorn we also need to start celery, which is a task queue that FlaskBB uses to send non blocking emails.
+In addition to gunicorn we also need to start celery. Celery is a task queue that FlaskBB uses to send non blocking emails.
 ```
-$ flaskbb celery start
+$ flaskbb celery worker
 ```
 
 Below is a example configuration for *nginx*. In this configuration all static files will be served via nginx.
