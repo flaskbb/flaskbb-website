@@ -8,7 +8,7 @@ body:
 
 ----
 
-Before you can start with installing the dependencies, you have to download FlaskBB. For now, the recommended method is to clone it and change into the latest release branch which is ``2.0.0``.
+Before you can start with installing the dependencies, you have to download FlaskBB. For now, the recommended method is to clone it and change into the latest release branch which is ``2.0.0``. All bugfix releases will also be pushed to this branch.
 ```
 $ git clone https://github.com/sh4nks/flaskbb.git
 ```
