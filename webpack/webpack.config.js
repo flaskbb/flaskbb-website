@@ -1,51 +1,92 @@
-var webpack = require('webpack');
-var path = require('path');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    entry: {
-        'app': './js/main.js',
-        'styles': './scss/main.scss',
-        'vendor': './scss/vendor.scss'
-    },
+    mode: "production",
+    entry: "./js/app.js",
     output: {
-        path: path.dirname(__dirname) + '/assets/static',
-        filename: 'app.js'
+        filename: "[name].js",
+        path: path.dirname(__dirname) + "/assets/static",
+        assetModuleFilename: "[name][ext]",
     },
-    devtool: '#cheap-module-source-map',
     resolve: {
-        modulesDirectories: ['node_modules'],
-        extensions: ['', '.js'],
-        alias: {
-            jquery: "jquery/src/jquery"
-        }
+        extensions: [".ts", ".tsx", ".js", ".json"],
     },
     module: {
-        loaders: [
-        {
-            test: /\.js$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader'
-        },
+        rules: [
+            {
+                test: /\.(j|t)sx?$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader",
+                    options: {
+                        presets: [
+                            [
+                                "@babel/preset-env",
+                                {
+                                    targets: "defaults",
+                                    useBuiltIns: "entry",
+                                    corejs: 3,
+                                },
+                            ],
+                            "@babel/preset-typescript",
+                        ],
+                        plugins: [
+                            "@babel/plugin-syntax-dynamic-import",
+                            "@babel/proposal-class-properties",
+                            "@babel/proposal-object-rest-spread",
+                        ],
+                    },
+                },
+            },
+
             {
                 test: /\.scss$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
+                use: [
+                    { loader: MiniCssExtractPlugin.loader },
+                    {
+                        loader: "css-loader",
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                    {
+                        loader: "postcss-loader",
+                        options: {
+                            sourceMap: true,
+                            postcssOptions: { plugins: ["postcss-preset-env"] },
+                        },
+                    },
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            sourceMap: true,
+                        },
+                    },
+                ],
             },
+
             {
                 test: /\.css$/,
-                loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+                use: [MiniCssExtractPlugin.loader, "css-loader"],
             },
+
             {
-                test: /\.(eot|woff|woff2|ttf|svg|png|jpe?g|gif)(\?\S*)?$/,
-                //loader: 'file'
-                loader: 'url?limit=100000&name=[name].[ext]'
-            }
-            ]
-        },
-        plugins: [
-            new ExtractTextPlugin('[name].css', {
-                allChunks: true
-            }),
-            new webpack.optimize.UglifyJsPlugin()
-        ]
-    };
+                test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+                type: "asset/resource",
+            },
+
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: "asset/resource",
+            },
+        ],
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+            chunkFilename: "[name].css",
+        }),
+    ],
+};

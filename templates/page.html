@@ -3,6 +3,7 @@
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
 <div class="container">
+    <div class="row">
     <div class="col-sm-3 col-md-3 toc">
         <ul class="tree-nav">
             <li><a class="header {% if this.is_child_of('/about') %}active{% endif %}" href="{{ '/about'|url }}">About</a></li>
@@ -16,8 +17,8 @@
             <li><a class="item {% if this.is_child_of('/upgrading') %}active{% endif %}" href="{{ '/upgrading'|url }}">Upgrading</a></li>
             <div class="seperator"></div>
             <li><a class="header {% if this.is_child_of('/development') %}active{% endif %}" href="{{ '/development'|url }}">Development</a></li>
-            <li><a class="item" href="https://github.com/sh4nks/flaskbb">Source Code @ GitHub</a></li>
-            <li><a class="item" href="https://github.com/sh4nks/flaskbb/issues">Issues @ GitHub</a></li>
+            <li><a class="item" href="https://github.com/flaskbb/flaskbb">Source Code @ GitHub</a></li>
+            <li><a class="item" href="https://github.com/flaskbb/flaskbb/issues">Issues @ GitHub</a></li>
             <li><a class="item" href="https://flaskbb.readthedocs.io">Docs @ readthedocs</a></li>
         </ul>
     </div>
@@ -26,6 +27,7 @@
         <div class="paper">
         {{ this.body }}
         </div>
+    </div>
     </div>
 </div>
 {% endblock %}

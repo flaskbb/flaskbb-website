@@ -1,7 +1,18 @@
-require("jquery");
-require("timeago");
-require("bootstrap-sass");
+import { Tooltip, Dropdown, Carousel } from 'bootstrap';
+import '../scss/app.scss'
 
+var tooltips = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltips.map(function (el) {
+  return new Tooltip(el)
+})
+
+// import all assets in ./assets
+function importAll(r) {
+  return r.keys().map(r);
+}
+importAll(require.context('../imgs', false, /\.(png|jpe?g|svg|ico)$/));
+
+/*
 $(document).ready(function () {
     var window_width = $(window).width();
     // Github Latest Commit
@@ -41,3 +52,4 @@ $(document).ready(function () {
       }
     });
 })
+*/
