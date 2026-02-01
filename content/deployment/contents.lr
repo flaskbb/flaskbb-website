@@ -33,7 +33,7 @@ Below is a example configuration for *nginx*. In this configuration all static f
 ```nginx
 server {
     listen 80;
-    server_name forums.flaskbb.org;
+    server_name forums.flaskbb.com;
 
     access_log /var/log/nginx/access.forums.flaskbb.log;
     error_log /var/log/nginx/error.forums.flaskbb.log;

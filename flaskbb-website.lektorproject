@@ -1,6 +1,6 @@
 [project]
 name = FlaskBB
-url = https://flaskbb.org/
+url = https://flaskbb.com/
 url_style = absolute
 
 [packages]
