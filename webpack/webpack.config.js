@@ -26,16 +26,9 @@ module.exports = {
                                 "@babel/preset-env",
                                 {
                                     targets: "defaults",
-                                    useBuiltIns: "entry",
-                                    corejs: 3,
                                 },
                             ],
                             "@babel/preset-typescript",
-                        ],
-                        plugins: [
-                            "@babel/plugin-syntax-dynamic-import",
-                            "@babel/proposal-class-properties",
-                            "@babel/proposal-object-rest-spread",
                         ],
                     },
                 },

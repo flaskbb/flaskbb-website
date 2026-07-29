@@ -1,0 +1,18 @@
+[project]
+name = "flaskbb-website"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "lektor~=3.4.0b13",
+    "lektor-markdown-highlighter>=0.3.2",
+    "lektor-slugify>=0.4",
+    "lektor-webpack-support>=0.6.0",
+]
+
+[tool.uv]
+exclude-newer = "7 days"
+
+[tool.uv.workspace]
+members = ["local-plugins/*"]
