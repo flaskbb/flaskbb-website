@@ -8,9 +8,6 @@ body:
 
 ----
 
-We recommend installing FlaskBB in an isolated Python environment. This can be
-achieved with [virtualenv](https://virtualenv.pypa.io/en/latest/installation.html) which we will use in our little installation guide.
-In addition to virtualenv, we will also use the package manager [pip](http://www.pip-installer.org/en/latest/installing.html) 
-to install the dependencies for FlaskBB.
+FlaskBB uses [uv](https://docs.astral.sh/uv/), a fast Python package and project manager, to install its dependencies and manage an isolated environment for you. Install uv first, then follow along with our installation guide.
 ---
 active_about: yes

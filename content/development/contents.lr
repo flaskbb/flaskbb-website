@@ -8,7 +8,7 @@ body:
 
 ----
 
-We love contributions from everyone. Don't be afraid to open a new Pull Request on [GitHub](https://github.com/sh4nks/flaskbb).
+We love contributions from everyone. Don't be afraid to open a new Pull Request on [GitHub](https://github.com/flaskbb/flaskbb).
 
 
 ## Support Questions
@@ -29,25 +29,26 @@ us to figure out what went wrong.
 
 ## Contributing Code
 
-Follow the [PEP8 style guide][pep8].
+FlaskBB uses [uv][uv] to manage dependencies and run everything below. Once
+uv is installed, ``uv sync`` in the project root sets up a working dev
+environment - no separate requirements file to install from.
 
-  [pep8]: https://www.python.org/dev/peps/pep-0008/
+  [uv]: https://docs.astral.sh/uv/
 
-FlaskBB is depending on a few python packages for development. One of those is
-[py.test][pytest] which runs our testsuite. Just use the provided
-``requirements-dev.txt`` file and you should be good to go.
+Format and lint your code with [ruff][ruff] before submitting:
 
-  [pytest]:http://doc.pytest.org/en/latest/
+    make format
 
-    pip install -r requirements-dev.txt
+  [ruff]: https://docs.astral.sh/ruff/
 
-Then you can run the testsuite with:
-
-    py.test
-
-alternatively you can also use ``make``
+Then run the testsuite with [pytest][pytest]:
 
     make test
+
+Both ``make`` targets are thin wrappers around ``uv run ruff ...`` / ``uv run
+pytest``; run those directly if you'd rather not use ``make``.
+
+  [pytest]: https://docs.pytest.org/en/latest/
 
 
 Mention how your changes affect the project to other developers and users in the

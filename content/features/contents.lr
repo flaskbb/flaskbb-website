@@ -44,7 +44,7 @@ Currently, following features are implemented:
 
 - **Plugin System**
 
-   Due to the plugin system it is possible to extend FlaskBB without touching a single line of code. You just drop the plugin into the plugins directory and activate it in the managment panel.
+   Due to the plugin system it is possible to extend FlaskBB without touching a single line of code. You just install the plugin package into the same environment as FlaskBB and activate it in the management panel.
 
 - **Command Line Interface**
 

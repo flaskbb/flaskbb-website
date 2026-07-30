@@ -8,40 +8,26 @@ body:
 
 ----
 
-Before you can start with installing the dependencies, you have to download FlaskBB. For now, the recommended method is to clone it and change into the latest release branch which is ``2.0.0``. All bugfix releases will also be pushed to this branch.
+FlaskBB requires Python 3.12 or newer and uses [uv](https://docs.astral.sh/uv/) to manage its dependencies and virtual environment. Install uv first if you haven't already, then clone FlaskBB:
 ```
-$ git clone https://github.com/sh4nks/flaskbb.git
+$ git clone https://github.com/flaskbb/flaskbb.git
+$ cd flaskbb
 ```
-Now, change into the flaskbb directory and checkout the release branch:
-```
-$ cd flaskbb 
-$ git checkout 2.0.0
-```
-Next, we create a virtualenv where we install all our dependencies which are needed in order for FlaskBB to work.
-```
-$ virtualenv .venv
-```
-after that, we can activate the environment
-```
-$ source .venv/bin/activate
-```
-and continue with installing the dependencies
-```
-$ pip install -r requirements.txt
-```
-Now that you have set up the environment where FlaskBB will run we can continue with configuring and installing FlaskBB.
+uv takes care of creating an isolated environment and installing dependencies for you when you run the commands below - there is no separate requirements file to install from and no virtualenv to activate by hand.
+
 To make configuring FlaskBB easier, we have included a little wizard which will ask you some questions and based on your answers it will generate a config file `flaskbb.cfg` in the root folder of FlaskBB. You are free to edit and modify the file afterwards.
 ```
-$ flaskbb makeconfig
+$ make devconfig
 ```
 During the installation process you are asked about your username, your email address and the password for your administrator user.
 ```
-$ flaskbb --config flaskbb.cfg install
+$ make install
 ```
 Run the development server and visit [localhost:5000](http://localhost:5000) to see if everything worked.
 ```
-$ flaskbb --config flaskbb.cfg run
+$ make run
 ```
+The `make` targets above are thin wrappers around `uv run flaskbb makeconfig -d`, `uv run flaskbb install` and `uv run flaskbb run --debugger --reload --debug` respectively, if you'd rather call `flaskbb` through `uv run` directly.
 
 Head over to the [Deployment](/deployment) docs to see how FlaskBB can be deployed.
 ---
