@@ -29,6 +29,6 @@ $ make run
 ```
 The `make` targets above are thin wrappers around `uv run flaskbb makeconfig -d`, `uv run flaskbb install` and `uv run flaskbb run --debugger --reload --debug` respectively, if you'd rather call `flaskbb` through `uv run` directly.
 
-Head over to the [Deployment](/deployment) docs to see how FlaskBB can be deployed.
+Head over to the [Deployment](/deployment) docs to see how FlaskBB can be deployed, or read the [full installation guide](https://flaskbb.readthedocs.io/en/latest/production/deployment/) in the documentation.
 ---
 active_about: yes

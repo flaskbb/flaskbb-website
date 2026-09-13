@@ -8,6 +8,19 @@ body:
 
 ----
 
-FlaskBB uses [uv](https://docs.astral.sh/uv/), a fast Python package and project manager, to install its dependencies and manage an isolated environment for you. Install uv first, then follow along with our installation guide.
+FlaskBB requires Python 3.12 or newer. We recommend installing FlaskBB with
+[uv](https://docs.astral.sh/uv/), which we will use in our little installation guide.
+uv creates an isolated virtual environment for FlaskBB, installs all dependencies and
+can even download a suitable Python version for you, so there is no separate virtualenv
+or pip step.
+
+If you don't have uv installed yet, follow the
+[installation instructions](https://docs.astral.sh/uv/getting-started/installation/)
+for your platform, for example:
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+You will also need [git](https://git-scm.com/) to download FlaskBB.
 ---
 active_about: yes

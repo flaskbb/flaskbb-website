@@ -69,6 +69,6 @@ server {
 }
 ```
 
-For other deployment options, visit the full-fledged documentation [here](https://flaskbb.readthedocs.io/en/latest/installation.html).
+For other deployment options, visit the full-fledged documentation [here](https://flaskbb.readthedocs.io/en/latest/production/deployment/).
 ---
 active_about: yes

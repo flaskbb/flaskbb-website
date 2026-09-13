@@ -155,6 +155,13 @@ footer {
     height: 450px;
 }
 
+.screenshot {
+    width: 100%;
+    box-shadow: 0 4px 16px rgba(85, 85, 85, 0.8);
+    border-radius: 6px;
+    margin: 15px 0;
+}
+
 .flaskbb-navbar {
     border-bottom: 1px solid $border-color;
     border-left: 1px solid $border-color;
