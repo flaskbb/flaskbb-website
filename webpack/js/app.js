@@ -10,7 +10,7 @@ var tooltipList = tooltips.map(function (el) {
 function importAll(r) {
   return r.keys().map(r);
 }
-importAll(require.context('../imgs', false, /\.(png|jpe?g|svg|ico)$/));
+importAll(require.context('../imgs', false, /\.(png|jpe?g|webp|svg|ico)$/));
 
 /*
 $(document).ready(function () {

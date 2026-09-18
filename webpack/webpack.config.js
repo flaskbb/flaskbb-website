@@ -4,7 +4,10 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: "production",
-    entry: "./js/app.js",
+    entry: {
+        main: "./js/app.js",
+        dark: "./scss/dark.scss",
+    },
     output: {
         filename: "[name].js",
         path: path.dirname(__dirname) + "/assets/static",
@@ -66,7 +69,7 @@ module.exports = {
             },
 
             {
-                test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
+                test: /\.(png|svg|jpg|jpeg|gif|webp|ico)$/i,
                 type: "asset/resource",
             },
 

@@ -1,0 +1,12 @@
+// Aurora Dark variant, loaded on top of main.css when the user prefers a dark
+// color scheme. Font Awesome is left out since main.css already provides it.
+@import "variables-dark";
+@import "site";
+
+@import "pygments-dark";
+
+// lektor-markdown-highlighter wraps code blocks in <div class="hll">, which
+// the light pygments stylesheet paints yellow
+div.hll {
+    background-color: transparent;
+}

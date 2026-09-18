@@ -15,9 +15,12 @@
     <meta property="og:type" content="website" />
 
     <!-- Favicon -->
-    <link href="{{'/static/favicon.ico'|asseturl }}" rel="icon">
+    <link href="{{'/static/favicon.ico'|asseturl }}" rel="icon" sizes="48x48">
+    <link href="{{'/static/favicon.svg'|asseturl }}" rel="icon" type="image/svg+xml">
     <!-- compiled and minified CSS -->
+    <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="{{'/static/main.css'|asseturl }}">
+    <link rel="stylesheet" href="{{'/static/dark.css'|asseturl }}" media="(prefers-color-scheme: dark)">
 </head>
 <body class="d-flex flex-column h-100">
 
