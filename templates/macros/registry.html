@@ -1,0 +1,18 @@
+{% macro entry_badges(entry) %}
+<div class="registry-badges">
+    <span class="badge registry-badge-{{ entry.kind }}">{{ entry.kind|title }}</span>
+    {% if entry.official %}<span class="badge registry-badge-official"><span class="fas fa-check"></span> Official</span>{% endif %}
+    {% if entry.bundled %}<span class="badge registry-badge-bundled">Bundled</span>{% endif %}
+</div>
+{% endmacro %}
+
+{% macro entry_visual(entry, large=false) %}
+{% if entry.preview %}
+<img class="{{ 'registry-preview-large' if large else 'card-img-top registry-preview' }}"
+     src="{{ entry.attachments.get(entry.preview)|url }}" alt="{{ entry.title }} preview" loading="lazy">
+{% else %}
+<div class="registry-icon{{ ' registry-icon-large' if large }}" aria-hidden="true">
+    <span class="fas fa-{{ entry.icon or 'puzzle-piece' }}"></span>
+</div>
+{% endif %}
+{% endmacro %}

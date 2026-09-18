@@ -1,0 +1,35 @@
+title: StopForumSpam
+---
+kind: plugin
+---
+official: yes
+---
+summary: Block known spammers at registration and report new ones.
+---
+author: Peter Justin
+---
+license: BSD-3-Clause
+---
+version: 1.0.0
+---
+requires: FlaskBB >= 3.0.0
+---
+package: flaskbb-plugin-stopforumspam
+---
+repository: https://github.com/flaskbb/flaskbb-plugin-stopforumspam
+---
+icon: shield-halved
+---
+tags:
+
+spam
+registration
+moderation
+---
+body:
+
+Checks every registration against [StopForumSpam](https://www.stopforumspam.com)'s database of known spammer usernames, email addresses and IP addresses. A match at or above the configured confidence score is rejected, and the attempt is logged for admins to review.
+
+Members who are allowed to ban users also get a "Report spammer" button on profiles. It reports the account to StopForumSpam and can ban it at the same time. Reporting needs a StopForumSpam [API key](https://www.stopforumspam.com/keys).
+
+After installing, run the migrations with `flaskbb db upgrade`.

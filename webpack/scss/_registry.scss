@@ -1,0 +1,209 @@
+.registry-introduction {
+    padding: 50px 15px 30px 15px;
+
+    h1 {
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    }
+
+    .registry-intro {
+        max-width: 720px;
+        margin: 0 auto;
+
+        a {
+            color: $fbb-header-title-color;
+            text-decoration: underline;
+        }
+
+        code {
+            color: $fbb-header-title-color;
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 0 4px;
+            border-radius: $border-radius-sm;
+        }
+    }
+}
+
+.registry {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.registry-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.registry-search {
+    flex: 1 1 240px;
+    max-width: 360px;
+}
+
+.registry-card {
+    color: inherit;
+    background-color: $fbb-bg-light;
+    border-color: $fbb-border-color;
+    transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+
+    &:hover,
+    &:focus-visible {
+        color: inherit;
+        text-decoration: none;
+        border-color: $fresh-blue;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.registry-card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 .35rem 0;
+}
+
+.registry-preview {
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top;
+    border-bottom: 1px solid $fbb-border-color;
+}
+
+.registry-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 16 / 10;
+    font-size: 3rem;
+    color: $fbb-header-title-color;
+    background-image: linear-gradient(135deg, $fbb-header-bg-secondary 0%, $fbb-header-bg-primary 100%);
+}
+
+.registry-icon-large {
+    flex: 0 0 auto;
+    width: 72px;
+    height: 72px;
+    aspect-ratio: auto;
+    font-size: 30px;
+    border-radius: 50%;
+}
+
+.registry-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+    margin-bottom: .75rem;
+
+    .badge {
+        font-weight: 500;
+        color: $white;
+    }
+}
+
+.registry-badge-plugin {
+    background-color: $fresh-blue;
+}
+
+.registry-badge-theme {
+    background-color: #8250df;
+}
+
+.registry-badge-official {
+    background-color: $green;
+}
+
+.registry-badge-bundled {
+    background-color: $gray;
+}
+
+.registry-card-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: .875rem;
+    color: $gray;
+    background-color: transparent;
+    border-top-color: $fbb-border-color;
+}
+
+.registry-empty {
+    margin-top: 2rem;
+    text-align: center;
+    color: $gray;
+}
+
+.registry-entry {
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+
+    h1 {
+        margin: 0 0 .5rem 0;
+    }
+}
+
+.registry-entry-header {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .lead {
+        margin-bottom: 0;
+    }
+}
+
+.registry-preview-large {
+    width: 100%;
+    margin: 0 0 1.5rem 0;
+    border: 1px solid $fbb-border-color;
+    border-radius: 6px;
+    box-shadow: $fbb-screenshot-shadow;
+}
+
+.registry-sidebar {
+    margin-bottom: 1rem;
+    background-color: $fbb-bg-light;
+    border-color: $fbb-border-color;
+
+    .card-header {
+        font-weight: 600;
+    }
+}
+
+.registry-install {
+    padding: .5rem;
+    color: $fbb-pre-color;
+    background-color: $fbb-pre-bg;
+    border: 1px solid $fbb-border-color;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.registry-meta {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .5rem 1rem;
+    margin: 0;
+
+    dt {
+        font-weight: 600;
+    }
+
+    dd {
+        margin: 0;
+    }
+}
+
+.registry-tag {
+    font-weight: 500;
+    color: $fbb-color;
+    background-color: $fbb-active-bg;
+}
+
+.registry-links {
+    display: flex;
+    gap: 1.25rem;
+    background-color: transparent;
+    border-top-color: $fbb-border-color;
+}

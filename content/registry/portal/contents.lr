@@ -1,0 +1,36 @@
+title: Portal
+---
+kind: plugin
+---
+official: yes
+---
+summary: A front page that collects recent topics from chosen forums.
+---
+author: Peter Justin
+---
+license: BSD-3-Clause
+---
+version: 3.0.1
+---
+requires: FlaskBB >= 3.0.0
+---
+package: flaskbb-plugin-portal
+---
+repository: https://github.com/flaskbb/flaskbb-plugin-portal
+---
+icon: newspaper
+---
+tags:
+
+front-page
+news
+---
+body:
+
+Adds a simple portal page to your forum. Most options live in the management panel.
+
+The portal is served at `/portal` by default. To change that, add this line to `flaskbb.cfg`, and pick a prefix that doesn't clash with one of FlaskBB's own URL prefixes:
+
+```python
+PLUGIN_PORTAL_URL_PREFIX = "/yourportalurlprefix"
+```

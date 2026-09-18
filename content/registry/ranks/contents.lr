@@ -1,0 +1,30 @@
+title: Ranks
+---
+kind: plugin
+---
+official: yes
+---
+summary: Adds user ranks to FlaskBB.
+---
+author: Alec Nikolas Reiter
+---
+license: MIT
+---
+version: 1.0.1
+---
+requires: FlaskBB >= 3.0.0
+---
+package: flaskbb-plugin-ranks
+---
+repository: https://github.com/flaskbb/flaskbb-plugin-ranks
+---
+icon: medal
+---
+tags:
+
+users
+profiles
+---
+body:
+
+Gives members ranks that show next to their posts and on their profile.

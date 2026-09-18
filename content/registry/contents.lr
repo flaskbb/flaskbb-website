@@ -1,0 +1,9 @@
+_model: registry
+---
+title: Registry
+---
+intro:
+
+Plugins and themes for FlaskBB. Plugins add features without touching FlaskBB's own code, and themes change how your forum looks.
+
+Want your plugin or theme listed? Open a pull request against the [website repository](https://github.com/sh4nks/flaskbb-website) that adds a folder under `content/registry/`.

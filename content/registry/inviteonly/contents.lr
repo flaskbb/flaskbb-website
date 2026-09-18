@@ -1,0 +1,32 @@
+title: Invite-only
+---
+kind: plugin
+---
+official: yes
+---
+summary: Let admins and members with a quota invite new users while registration is closed.
+---
+author: Peter Justin
+---
+license: BSD-3-Clause
+---
+version: 1.0.0
+---
+requires: FlaskBB >= 3.0.0
+---
+package: flaskbb-plugin-inviteonly
+---
+repository: https://github.com/flaskbb/flaskbb-plugin-inviteonly
+---
+icon: envelope-open-text
+---
+tags:
+
+registration
+invitations
+---
+body:
+
+Admins, and members with an invitation quota, create one-time invitation codes or links. An invitation can be emailed straight to the recipient, or the code can be copied and shared by hand.
+
+Invitations work even when FlaskBB's own registration is turned off (`REGISTRATION_ENABLED`). Admins manage every invitation and each user's quota from the "Invitations" page in the admin panel.

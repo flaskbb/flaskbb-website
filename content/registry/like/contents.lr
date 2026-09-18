@@ -1,0 +1,34 @@
+title: Like
+---
+kind: plugin
+---
+official: yes
+---
+summary: Let users like posts and see who liked them.
+---
+author: Peter Justin
+---
+license: BSD-3-Clause
+---
+version: 1.0.0
+---
+requires: FlaskBB >= 3.0.0
+---
+package: flaskbb-plugin-like
+---
+repository: https://github.com/flaskbb/flaskbb-plugin-like
+---
+icon: thumbs-up
+---
+tags:
+
+reactions
+posts
+---
+body:
+
+Adds a like button to every post and shows who liked it.
+
+After installing, run the migrations with `flaskbb db upgrade`.
+
+Forked from [flaskbb-plugin-vanity](https://github.com/micha030201/flaskbb-plugin-vanity) by Михаил Лебедев.

@@ -1,10 +1,13 @@
 import { Tooltip, Dropdown, Carousel } from 'bootstrap';
 import '../scss/app.scss'
+import { initRegistry } from './registry';
 
 var tooltips = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltips.map(function (el) {
   return new Tooltip(el)
 })
+
+document.querySelectorAll('[data-registry]').forEach(initRegistry);
 
 // import all assets in ./assets
 function importAll(r) {

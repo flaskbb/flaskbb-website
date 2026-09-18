@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% from "macros/registry.html" import entry_badges, entry_visual %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+{% set entries = this.children.all() %}
+{% set plugin_count = this.children.filter(F.kind == 'plugin').count() %}
+{% set theme_count = this.children.filter(F.kind == 'theme').count() %}
+<div class="introduction registry-introduction">
+    <div class="container">
+        <h1>{{ this.title }}</h1>
+        <div class="registry-intro">{{ this.intro }}</div>
+    </div>
+</div>
+
+<div class="container registry" data-registry>
+    <div class="registry-toolbar" data-registry-toolbar hidden>
+        <div class="btn-group" role="group" aria-label="Filter by kind">
+            <button type="button" class="btn btn-outline-secondary active" data-registry-kind="" aria-pressed="true">
+                All <span class="badge text-bg-secondary">{{ entries|length }}</span>
+            </button>
+            <button type="button" class="btn btn-outline-secondary" data-registry-kind="plugin" aria-pressed="false">
+                <span class="fas fa-puzzle-piece"></span> Plugins <span class="badge text-bg-secondary">{{ plugin_count }}</span>
+            </button>
+            <button type="button" class="btn btn-outline-secondary" data-registry-kind="theme" aria-pressed="false">
+                <span class="fas fa-palette"></span> Themes <span class="badge text-bg-secondary">{{ theme_count }}</span>
+            </button>
+        </div>
+        <input type="search" class="form-control registry-search" placeholder="Search by name, tag or author" aria-label="Search the registry" data-registry-search>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for entry in entries %}
+        <div class="col" data-registry-entry data-kind="{{ entry.kind }}"
+             data-search="{{ [entry.title, entry.summary, entry.author, entry.tags|join(' ')]|join(' ')|lower }}">
+            <a class="card h-100 registry-card" href="{{ entry|url }}">
+                {{ entry_visual(entry) }}
+                <div class="card-body">
+                    <h2 class="registry-card-title">{{ entry.title }}</h2>
+                    {{ entry_badges(entry) }}
+                    <p class="card-text">{{ entry.summary }}</p>
+                </div>
+                <div class="card-footer registry-card-footer">
+                    <span>v{{ entry.version }}</span>
+                    <span>{{ entry.author }}</span>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <p class="registry-empty" data-registry-empty hidden>Nothing matches your search.</p>
+</div>
+{% endblock %}

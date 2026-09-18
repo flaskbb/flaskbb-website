@@ -1,0 +1,30 @@
+title: Aurora
+---
+kind: theme
+---
+official: yes
+---
+bundled: yes
+---
+summary: The default theme for FlaskBB.
+---
+author: sh4nks
+---
+license: BSD-3-Clause
+---
+version: 1.0.0
+---
+requires: FlaskBB >= 3.0.0
+---
+repository: https://github.com/flaskbb/flaskbb/tree/master/flaskbb/themes/aurora
+---
+preview: preview.png
+---
+tags:
+
+light
+default
+---
+body:
+
+FlaskBB's default theme. Every template can be overridden, so Aurora is also a good starting point for your own theme. See the [theming documentation](https://flaskbb.readthedocs.io/en/latest/theming.html).

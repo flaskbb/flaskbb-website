@@ -44,6 +44,9 @@
                     </li>
                     {% endfor %}
                     <li class="nav-item">
+                        <a class="nav-link {% if this.is_child_of('/registry') %}active{% endif %}" href="{{ '/registry'|url }}">Extensions</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="https://forums.flaskbb.com">Community</a>
                     </li>
                     <li class="nav-item">

@@ -1,0 +1,29 @@
+title: Aurora Dark
+---
+kind: theme
+---
+official: yes
+---
+bundled: yes
+---
+summary: A dark variant of the default Aurora theme.
+---
+author: sh4nks
+---
+license: BSD-3-Clause
+---
+version: 1.0.0
+---
+requires: FlaskBB >= 3.0.0
+---
+repository: https://github.com/flaskbb/flaskbb/tree/master/flaskbb/themes/aurora_dark
+---
+preview: preview.png
+---
+tags:
+
+dark
+---
+body:
+
+Aurora with a dark color palette. It reuses Aurora's templates and styles and changes only the colors.

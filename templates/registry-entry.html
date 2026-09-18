@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% from "macros/registry.html" import entry_badges, entry_visual %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+<div class="container registry-entry">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{{ this.parent|url }}">{{ this.parent.title }}</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ this.title }}</li>
+        </ol>
+    </nav>
+
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="paper">
+                <div class="registry-entry-header">
+                    {% if not this.preview %}{{ entry_visual(this, large=true) }}{% endif %}
+                    <div>
+                        <h1>{{ this.title }}</h1>
+                        {{ entry_badges(this) }}
+                        <p class="lead">{{ this.summary }}</p>
+                    </div>
+                </div>
+                {% if this.preview %}{{ entry_visual(this, large=true) }}{% endif %}
+                {{ this.body }}
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card registry-sidebar">
+                <div class="card-header">Install</div>
+                <div class="card-body">
+                    {% if this.bundled %}
+                    <p>Ships with FlaskBB, so there is nothing to install.</p>
+                    {% else %}
+                    <pre class="registry-install"><code>pip install {{ this.package }}</code></pre>
+                    {% endif %}
+                    {% if this.kind == 'theme' %}
+                    <p class="mb-0">Then pick it as the default theme under Management &rarr; Settings &rarr; Appearance Settings.</p>
+                    {% else %}
+                    <p class="mb-0">Then install and enable it under Management &rarr; Plugins.</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="card registry-sidebar">
+                <div class="card-header">Details</div>
+                <dl class="card-body registry-meta">
+                    <dt>Version</dt><dd>{{ this.version }}</dd>
+                    <dt>Requires</dt><dd>{{ this.requires }}</dd>
+                    <dt>Author</dt><dd>{{ this.author }}</dd>
+                    <dt>License</dt><dd>{{ this.license }}</dd>
+                    {% if this.tags %}
+                    <dt>Tags</dt>
+                    <dd>{% for tag in this.tags %}<span class="badge registry-tag">{{ tag }}</span> {% endfor %}</dd>
+                    {% endif %}
+                </dl>
+                <div class="card-footer registry-links">
+                    {% if this.repository %}<a href="{{ this.repository }}"><span class="fas fa-code"></span> Source code</a>{% endif %}
+                    {% if this.package %}<a href="https://pypi.org/project/{{ this.package }}/"><span class="fas fa-box"></span> PyPI</a>{% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
