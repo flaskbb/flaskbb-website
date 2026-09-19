@@ -1,0 +1,13 @@
+[project]
+name = "lektor-github-issues"
+version = "0.1.0"
+description = "Links #123 references in markdown to GitHub issues and pull requests"
+requires-python = ">=3.13"
+dependencies = ["lektor", "mistune>=2,<3"]
+
+[project.entry-points."lektor.plugins"]
+github-issues = "lektor_github_issues:GitHubIssuesPlugin"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

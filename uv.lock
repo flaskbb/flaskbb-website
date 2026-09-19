@@ -6,6 +6,12 @@ requires-python = ">=3.13"
 exclude-newer = "0001-01-01T00:00:00Z" # This has no effect and is included for backwards compatibility when using relative exclude-newer values.
 exclude-newer-span = "P7D"
 
+[manifest]
+members = [
+    "flaskbb-website",
+    "lektor-github-issues",
+]
+
 [[package]]
 name = "anyio"
 version = "4.14.2"
@@ -137,6 +143,7 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "lektor" },
+    { name = "lektor-github-issues" },
     { name = "lektor-markdown-highlighter" },
     { name = "lektor-slugify" },
     { name = "lektor-webpack-support" },
@@ -145,6 +152,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "lektor", specifier = "~=3.4.0b13" },
+    { name = "lektor-github-issues", editable = "local-plugins/lektor-github-issues" },
     { name = "lektor-markdown-highlighter", specifier = ">=0.3.2" },
     { name = "lektor-slugify", specifier = ">=0.4" },
     { name = "lektor-webpack-support", specifier = ">=0.6.0" },
@@ -211,6 +219,21 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/69/d1/fb5317c7c52e8290034b97e1fce7b609033d080da640bb7d5da6682c2771/lektor-3.4.0b14.tar.gz", hash = "sha256:111818c8491fbc0b2bcf3a28ea1c523cec72d56f6941ff021250af6c062a827a", size = 1533185, upload-time = "2026-04-05T20:37:06.042Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d1/26/05bf07d70470bff01948330210536704360a416ea6a5bc8af01b2400f19b/lektor-3.4.0b14-py3-none-any.whl", hash = "sha256:e18515eba89499766cc076ddb4825b4af283fc4c1fa8e8fb14f6be72e5743ced", size = 816796, upload-time = "2026-04-05T20:37:04.237Z" },
+]
+
+[[package]]
+name = "lektor-github-issues"
+version = "0.1.0"
+source = { editable = "local-plugins/lektor-github-issues" }
+dependencies = [
+    { name = "lektor" },
+    { name = "mistune" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "lektor" },
+    { name = "mistune", specifier = ">=2,<3" },
 ]
 
 [[package]]
