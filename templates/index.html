@@ -1,143 +1,171 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
-    <!-- Introduction -->
-    <div class="introduction">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="headline">
-                        <h1>FlaskBB</h1>
-                        <h3>A classic Forum Software in Python with a Modern and Fresh look.</h3>
-                        <hr class="introduction-divider ms-auto me-auto">
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            <a href="{{ '/installation'|url }}" class="btn btn-success intro-btn"><span class="fa fa-download"></span> Install <small>v2.2.1</small></a>
-                            <a href="https://github.com/flaskbb/flaskbb" class="btn btn-dark intro-btn"><span class="fa fa-code"></span> Source Code</a>
-                        </div>
+<!-- Introduction -->
+<div class="introduction">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="headline">
+                    <h1>FlaskBB</h1>
+                    <h3>A classic Forum Software in Python with a Modern and Fresh look.</h3>
+                    <hr class="introduction-divider ms-auto me-auto">
+                    <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <a href="{{ '/installation'|url }}" class="btn btn-success intro-btn"><span
+                                class="fa fa-download"></span> Install <small>v3.0.0</small></a>
+                        <a href="https://github.com/flaskbb/flaskbb" class="btn btn-dark intro-btn"><span
+                                class="fa fa-code"></span> Source Code</a>
+                    </div>
 
-                        <div class="pt-2">
-                            <a class="github-button" href="https://github.com/flaskbb/flaskbb" data-icon="octicon-star" data-show-count="true" aria-label="Star flaskbb/flaskbb on GitHub">Star</a>
-                            <a class="github-button" href="https://github.com/flaskbb/flaskbb/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork flaskbb/flaskbb on GitHub">Fork</a>
-                        </div>
+                    <div class="pt-2">
+                        <a class="github-button" href="https://github.com/flaskbb/flaskbb" data-icon="octicon-star"
+                            data-show-count="true" aria-label="Star flaskbb/flaskbb on GitHub">Star</a>
+                        <a class="github-button" href="https://github.com/flaskbb/flaskbb/fork"
+                            data-icon="octicon-repo-forked" data-show-count="true"
+                            aria-label="Fork flaskbb/flaskbb on GitHub">Fork</a>
                     </div>
                 </div>
             </div>
-        </div><!-- /.container -->
-    </div><!-- /.introduction -->
-
-    <!-- Page Content -->
-    <div class="background-dark">
-        <div class="container">
-            <div class="row features">
-                <div class="col-6 feature">
-                    <i class="feature-circle fas fa-code"></i>
-                    <h2>Open Source</h2>
-                    <p>FlaskBB is open source and the whole source code is available on <a href="https://github.com/flaskbb/flaskbb">GitHub</a>. It is being developed under the BSD 3-Clause license.</p>
-                </div>
-                <div class="col-6 feature">
-                    <i class="feature-circle fas fa-puzzle-piece"></i>
-                    <h2>Plugin System</h2>
-                    <p>Due to the plugin system it is possible to extend FlaskBB without touching a single line of code. You just drop the plugin into the plugins directory <!-- TODO: or install it directly with the python package manager <code>pip</code>--> and activate it in the managment panel.</p>
-                </div>
-            </div>
-            <div class="row features">
-                <div class="col-6 feature">
-                    <i class="feature-circle fas fa-globe"></i>
-                    <h2>Themes</h2>
-                    <p>Are you sick of the standard theme or you simply want to create a customized style for your site? No problem! You can customize every template in FlaskBB. Besides that, you can also install community made themes.</p>
-                </div>
-                <div class="col-6 feature">
-                    <i class="feature-circle fas fa-laptop"></i>
-                    <h2>Modern &amp; Classic</h2>
-                    <p>Our goal is to develop a forum system with modern technologies and sticking to already well tested and approved layouts.</p>
-                </div>
-            </div>
-        </div><!-- /.container -->
-    </div><!-- /.background-dark -->
-
-    <div class="background-light">
-        <div id="flaskbb-carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-inner justify-content-center">
-                <div class="carousel-item active">
-                    <img src="{{ '/static/index.webp' | asseturl }}" class="d-block carousel-img ms-auto me-auto" alt="Forum index">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ '/static/forum.webp' | asseturl }}" class="d-block carousel-img ms-auto me-auto" alt="Forum view">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ '/static/topic.webp' | asseturl }}" class="d-block carousel-img ms-auto me-auto" alt="Topic view">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ '/static/poll.webp' | asseturl }}" class="d-block carousel-img ms-auto me-auto" alt="Topic with a poll">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ '/static/editor.webp' | asseturl }}" class="d-block carousel-img ms-auto me-auto" alt="Nested quotes and the reply editor">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ '/static/search.webp' | asseturl }}" class="d-block carousel-img ms-auto me-auto" alt="Advanced search">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ '/static/management_overview.webp' | asseturl }}" class="d-block carousel-img ms-auto me-auto" alt="Management panel overview">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ '/static/plugins.webp' | asseturl }}" class="d-block carousel-img ms-auto me-auto" alt="Plugin management">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#flaskbb-carousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#flaskbb-carousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-    </div><!-- background-light -->
+    </div><!-- /.container -->
+</div><!-- /.introduction -->
 
-    <div class="background-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-md-8 col-lg-10">
-                    <h4>Development</h4>
-                    <div class="github-commit">
-                        <div class="commit">
-                            <a href="" class="sha"></a>
-                            <span class="date"></span>
-                        </div>
-                    </div>
-                    <p>
-                        <a href="https://github.com/flaskbb/flaskbb/actions/workflows/tests.yml"><img src="https://github.com/flaskbb/flaskbb/actions/workflows/tests.yml/badge.svg" alt="Build Status" /></a>
-                        <a href="https://codecov.io/gh/flaskbb/flaskbb"><img src="https://codecov.io/gh/flaskbb/flaskbb/branch/master/graph/badge.svg" alt="Coverage Status" /></a>
-                        <a href="https://flaskbb.com"><img src="https://img.shields.io/badge/license-BSD-blue.svg" alt="BSD License" /></a>
-                    </p>
-                    <div class="github-issues">
-                        Help! There are
-                        <a href="https://github.com/flaskbb/flaskbb/issues"><span class="open-issues"></span> open issues</a>
-                        and
-                        <a href="https://github.com/flaskbb/flaskbb/pulls"><span class="pull-requests"></span> open pull requests</a>.
+<!-- Page Content -->
+<div class="background-dark">
+    <div class="container">
+        <div class="row features">
+            <div class="col-6 feature">
+                <i class="feature-circle fas fa-code"></i>
+                <h2>Open Source</h2>
+                <p>FlaskBB is open source and the whole source code is available on <a
+                        href="https://github.com/flaskbb/flaskbb">GitHub</a>. It is being developed under the BSD
+                    3-Clause license.</p>
+            </div>
+            <div class="col-6 feature">
+                <i class="feature-circle fas fa-puzzle-piece"></i>
+                <h2>Plugin System</h2>
+                <p>Due to the plugin system it is possible to extend FlaskBB without touching a single line of code. You
+                    just drop the plugin into the plugins directory
+                    <!-- TODO: or install it directly with the python package manager <code>pip</code>--> and activate
+                    it in the managment panel.</p>
+            </div>
+        </div>
+        <div class="row features">
+            <div class="col-6 feature">
+                <i class="feature-circle fas fa-globe"></i>
+                <h2>Themes</h2>
+                <p>Are you sick of the standard theme or you simply want to create a customized style for your site? No
+                    problem! You can customize every template in FlaskBB. Besides that, you can also install community
+                    made themes.</p>
+            </div>
+            <div class="col-6 feature">
+                <i class="feature-circle fas fa-laptop"></i>
+                <h2>Modern &amp; Classic</h2>
+                <p>Our goal is to develop a forum system with modern technologies and sticking to already well tested
+                    and approved layouts.</p>
+            </div>
+        </div>
+    </div><!-- /.container -->
+</div><!-- /.background-dark -->
+
+<div class="background-light">
+    <div id="flaskbb-carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner justify-content-center">
+            <div class="carousel-item active">
+                <img src="{{ '/static/index.webp' | asseturl }}" class="d-block carousel-img ms-auto me-auto"
+                    alt="Forum index">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ '/static/forum.webp' | asseturl }}" class="d-block carousel-img ms-auto me-auto"
+                    alt="Forum view">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ '/static/topic.webp' | asseturl }}" class="d-block carousel-img ms-auto me-auto"
+                    alt="Topic view">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ '/static/poll.webp' | asseturl }}" class="d-block carousel-img ms-auto me-auto"
+                    alt="Topic with a poll">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ '/static/editor.webp' | asseturl }}" class="d-block carousel-img ms-auto me-auto"
+                    alt="Nested quotes and the reply editor">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ '/static/search.webp' | asseturl }}" class="d-block carousel-img ms-auto me-auto"
+                    alt="Advanced search">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ '/static/management_overview.webp' | asseturl }}"
+                    class="d-block carousel-img ms-auto me-auto" alt="Management panel overview">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ '/static/plugins.webp' | asseturl }}" class="d-block carousel-img ms-auto me-auto"
+                    alt="Plugin management">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#flaskbb-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#flaskbb-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div><!-- background-light -->
+
+<div class="background-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-lg-10">
+                <h4>Development</h4>
+                <div class="github-commit">
+                    <div class="commit">
+                        <a href="" class="sha"></a>
+                        <span class="date"></span>
                     </div>
                 </div>
-                <div class="col-xs-12 col-md-4 col-lg-2">
-                    <h4>Links</h4>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="{{ '/'|url }}">Home</a>
-                        </li>
-                        <li>
-                            <a href="{{ '/about'|url }}">About</a>
-                        </li>
-                        <li>
-                            <a href="https://flaskbb.readthedocs.io">Documentation</a>
-                        </li>
-                        <li>
-                            <a href="https://forums.flaskbb.com">Community</a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/flaskbb/flaskbb">GitHub</a>
-                        </li>
-                    </ul>
+                <p>
+                    <a href="https://github.com/flaskbb/flaskbb/actions/workflows/tests.yml"><img
+                            src="https://github.com/flaskbb/flaskbb/actions/workflows/tests.yml/badge.svg"
+                            alt="Build Status" /></a>
+                    <a href="https://codecov.io/gh/flaskbb/flaskbb"><img
+                            src="https://codecov.io/gh/flaskbb/flaskbb/branch/master/graph/badge.svg"
+                            alt="Coverage Status" /></a>
+                    <a href="https://flaskbb.com"><img src="https://img.shields.io/badge/license-BSD-blue.svg"
+                            alt="BSD License" /></a>
+                </p>
+                <div class="github-issues">
+                    Help! There are
+                    <a href="https://github.com/flaskbb/flaskbb/issues"><span class="open-issues"></span> open
+                        issues</a>
+                    and
+                    <a href="https://github.com/flaskbb/flaskbb/pulls"><span class="pull-requests"></span> open pull
+                        requests</a>.
                 </div>
             </div>
-        </div><!-- /.container -->
-    </div><!-- /.background-dark -->
+            <div class="col-xs-12 col-md-4 col-lg-2">
+                <h4>Links</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="{{ '/'|url }}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{{ '/about'|url }}">About</a>
+                    </li>
+                    <li>
+                        <a href="https://flaskbb.readthedocs.io">Documentation</a>
+                    </li>
+                    <li>
+                        <a href="https://forums.flaskbb.com">Community</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/flaskbb/flaskbb">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- /.container -->
+</div><!-- /.background-dark -->
 {% endblock %}
