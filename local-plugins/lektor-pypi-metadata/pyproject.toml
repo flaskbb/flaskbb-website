@@ -1,0 +1,13 @@
+[project]
+name = "lektor-pypi-metadata"
+version = "0.1.0"
+description = "Reads the version, license and FlaskBB requirement of a package from PyPI"
+requires-python = ">=3.13"
+dependencies = ["lektor", "packaging"]
+
+[project.entry-points."lektor.plugins"]
+pypi-metadata = "lektor_pypi_metadata:PyPIMetadataPlugin"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
