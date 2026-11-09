@@ -8,12 +8,6 @@ summary: Let admins and members with a quota invite new users while registration
 ---
 author: Peter Justin
 ---
-license: BSD-3-Clause
----
-version: 1.0.0
----
-requires: FlaskBB >= 3.0.0
----
 package: flaskbb-plugin-inviteonly
 ---
 repository: https://github.com/flaskbb/flaskbb-plugin-inviteonly

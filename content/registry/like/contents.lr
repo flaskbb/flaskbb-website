@@ -8,12 +8,6 @@ summary: Let users like posts and see who liked them.
 ---
 author: Peter Justin
 ---
-license: BSD-3-Clause
----
-version: 1.0.0
----
-requires: FlaskBB >= 3.0.0
----
 package: flaskbb-plugin-like
 ---
 repository: https://github.com/flaskbb/flaskbb-plugin-like

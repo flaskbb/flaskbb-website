@@ -8,12 +8,6 @@ summary: Private messaging between members.
 ---
 author: Peter Justin
 ---
-license: BSD-3-Clause
----
-version: 3.0.2
----
-requires: FlaskBB >= 3.0.0
----
 package: flaskbb-plugin-conversations
 ---
 repository: https://github.com/flaskbb/flaskbb-plugin-conversations

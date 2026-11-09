@@ -8,12 +8,6 @@ summary: A front page that collects recent topics from chosen forums.
 ---
 author: Peter Justin
 ---
-license: BSD-3-Clause
----
-version: 3.0.1
----
-requires: FlaskBB >= 3.0.0
----
 package: flaskbb-plugin-portal
 ---
 repository: https://github.com/flaskbb/flaskbb-plugin-portal

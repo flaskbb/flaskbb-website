@@ -9,6 +9,7 @@ dependencies = [
     "lektor-markdown-highlighter>=0.3.2",
     "lektor-slugify>=0.4",
     "lektor-github-issues",
+    "lektor-pypi-metadata",
     "lektor-webpack-support>=0.6.0",
 ]
 
@@ -17,6 +18,7 @@ exclude-newer = "7 days"
 
 [tool.uv.sources]
 lektor-github-issues = { workspace = true }
+lektor-pypi-metadata = { workspace = true }
 
 [tool.uv.workspace]
 members = ["local-plugins/*"]

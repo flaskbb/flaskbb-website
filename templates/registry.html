@@ -30,6 +30,7 @@
 
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
         {% for entry in entries %}
+        {% set meta = pypi_metadata(entry.package) if entry.package else entry %}
         <div class="col" data-registry-entry data-kind="{{ entry.kind }}"
              data-search="{{ [entry.title, entry.summary, entry.author, entry.tags|join(' ')]|join(' ')|lower }}">
             <a class="card h-100 registry-card" href="{{ entry|url }}">
@@ -40,7 +41,7 @@
                     <p class="card-text">{{ entry.summary }}</p>
                 </div>
                 <div class="card-footer registry-card-footer">
-                    <span>v{{ entry.version }}</span>
+                    <span>v{{ meta.version }}</span>
                     <span>{{ entry.author }}</span>
                 </div>
             </a>

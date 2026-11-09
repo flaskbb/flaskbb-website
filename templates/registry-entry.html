@@ -2,6 +2,7 @@
 {% from "macros/registry.html" import entry_badges, entry_visual %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
+{% set meta = pypi_metadata(this.package) if this.package else this %}
 <div class="container registry-entry">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -46,10 +47,10 @@
             <div class="card registry-sidebar">
                 <div class="card-header">Details</div>
                 <dl class="card-body registry-meta">
-                    <dt>Version</dt><dd>{{ this.version }}</dd>
-                    <dt>Requires</dt><dd>{{ this.requires }}</dd>
+                    <dt>Version</dt><dd>{{ meta.version }}</dd>
+                    <dt>Requires</dt><dd>{{ meta.requires or this.requires }}</dd>
                     <dt>Author</dt><dd>{{ this.author }}</dd>
-                    <dt>License</dt><dd>{{ this.license }}</dd>
+                    <dt>License</dt><dd>{{ meta.license or this.license }}</dd>
                     {% if this.tags %}
                     <dt>Tags</dt>
                     <dd>{% for tag in this.tags %}<span class="badge registry-tag">{{ tag }}</span> {% endfor %}</dd>

@@ -10,6 +10,7 @@ exclude-newer-span = "P7D"
 members = [
     "flaskbb-website",
     "lektor-github-issues",
+    "lektor-pypi-metadata",
 ]
 
 [[package]]
@@ -201,6 +202,7 @@ dependencies = [
     { name = "lektor" },
     { name = "lektor-github-issues" },
     { name = "lektor-markdown-highlighter" },
+    { name = "lektor-pypi-metadata" },
     { name = "lektor-slugify" },
     { name = "lektor-webpack-support" },
 ]
@@ -210,6 +212,7 @@ requires-dist = [
     { name = "lektor", specifier = "~=3.4.0b13" },
     { name = "lektor-github-issues", editable = "local-plugins/lektor-github-issues" },
     { name = "lektor-markdown-highlighter", specifier = ">=0.3.2" },
+    { name = "lektor-pypi-metadata", editable = "local-plugins/lektor-pypi-metadata" },
     { name = "lektor-slugify", specifier = ">=0.4" },
     { name = "lektor-webpack-support", specifier = ">=0.6.0" },
 ]
@@ -301,6 +304,21 @@ dependencies = [
 ]
 wheels = [
     { url = "https://files.pythonhosted.org/packages/90/a1/3a111391644bbbf2b76bea5c80a0bbcfd8cb12b4b2ffdeac60e23b5458d9/lektor_markdown_highlighter-0.3.2-py2.py3-none-any.whl", hash = "sha256:8af5468928f039106cb760844d1c78556b7838c47ee792c13dc81ca45a5d2ad0", size = 4236, upload-time = "2022-04-30T04:01:28.525Z" },
+]
+
+[[package]]
+name = "lektor-pypi-metadata"
+version = "0.1.0"
+source = { editable = "local-plugins/lektor-pypi-metadata" }
+dependencies = [
+    { name = "lektor" },
+    { name = "packaging" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "lektor" },
+    { name = "packaging" },
 ]
 
 [[package]]
@@ -461,6 +479,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/a2/6e/371856a3fb9d31ca8dac321cda606860fa4548858c0cc45d9d1d4ca2628b/mypy_extensions-1.1.0.tar.gz", hash = "sha256:52e68efc3284861e772bbcd66823fde5ae21fd2fdb51c62a211403730b916558", size = 6343, upload-time = "2025-04-22T14:54:24.164Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/79/7b/2c79738432f5c924bef5071f933bcc9efd0473bac3b4aa584a6f7c1c8df8/mypy_extensions-1.1.0-py3-none-any.whl", hash = "sha256:1be4cccdb0f2482337c4743e60421de3a356cd97508abadd57d47403e94f5505", size = 4963, upload-time = "2025-04-22T14:54:22.983Z" },
+]
+
+[[package]]
+name = "packaging"
+version = "26.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz", hash = "sha256:94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79", size = 313412, upload-time = "2026-08-04T18:15:28.737Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/63/34/ba1c580383c9eada3711951fef0795c80b829a078d72188184bcab9dd527/packaging-26.3-py3-none-any.whl", hash = "sha256:d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c", size = 129956, upload-time = "2026-08-04T18:15:27.159Z" },
 ]
 
 [[package]]

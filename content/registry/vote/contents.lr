@@ -8,12 +8,6 @@ summary: Attach single or multiple choice polls to topics and posts.
 ---
 author: Peter Justin
 ---
-license: BSD-3-Clause
----
-version: 1.2.0
----
-requires: FlaskBB >= 3.0.0
----
 package: flaskbb-plugin-vote
 ---
 repository: https://github.com/flaskbb/flaskbb-plugin-vote

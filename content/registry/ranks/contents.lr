@@ -8,12 +8,6 @@ summary: Adds user ranks to FlaskBB.
 ---
 author: Alec Nikolas Reiter
 ---
-license: MIT
----
-version: 1.0.1
----
-requires: FlaskBB >= 3.0.0
----
 package: flaskbb-plugin-ranks
 ---
 repository: https://github.com/flaskbb/flaskbb-plugin-ranks
